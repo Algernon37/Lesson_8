@@ -15,6 +15,7 @@
 
 int [,] table = new int  [4,3];
 
+
 void FillArray(int [,] matrix)
 {
     for (int rows = 0; rows < matrix.GetLength(0); rows++)
@@ -31,8 +32,8 @@ void FillArray(int [,] matrix)
 void SumArray(int [,] matrix)
 {
     int row = 0;
-    int minSumRow = 0;
-    int sumRow = 0;
+    int MinSum = 0;
+    int Sum = 0;
 
     for (int i = 0; i < matrix.GetLength(1); i++)
     {
@@ -43,17 +44,17 @@ void SumArray(int [,] matrix)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            sumRow += sumRow + matrix[i, j];
+            Sum += Sum + matrix[i, j];
         }
 
-        if (sumRow < row)
+        if (Sum < row)
         {
-            row = sumRow;
-            minSumRow = i;
+            row = Sum;
+            MinSum = i;
         }
-        sumRow = 0;
+        Sum = 0;
     }
-    Console.Write($"{minSumRow + 1} строка");
+    Console.Write($"{MinSum + 1} строка");
 }
 
 FillArray(table);
