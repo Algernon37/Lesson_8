@@ -13,7 +13,7 @@ int m = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Сколько строчек в массиве?");
 int n = Convert.ToInt32(Console.ReadLine());
 int [,] table = new int  [n,m];
-int [,] array = new int [n,m];
+
 
 void FillArray(int [,] matrix)
 {
@@ -38,9 +38,9 @@ void ChangeArray(int[,] matrix)
             {
                 if(matrix[rows,columns2] > array[rows,columns2+1])
                 {
-                    int temp = matrix[rows, columns2 + 1];
+                    int temporary = matrix[rows, columns2 + 1];
                     matrix[rows, columns2 + 1] = matrix[rows, columns2];
-                    matrix[rows, columns2] = temp;
+                    matrix[rows, columns2] = temporary;
                 }
             }
         }
