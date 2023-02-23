@@ -29,11 +29,12 @@ void FillArray(int [,] matrix)
 
 void Multiplication(int [,] matrix, int [,] matrix1, int [,] matrix2)
 {
-    int result = 0;
+    
   for (int rows  = 0; rows  < matrix2.GetLength(0); rows ++)
   {
     for (int columns = 0; columns < matrix2.GetLength(1); columns++)
     {
+      int result = 0;
       for (int i = 0; i < matrix.GetLength(1); i++)
       {
         result += matrix[rows ,i] * matrix1[i,columns];
